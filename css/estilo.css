@@ -1,0 +1,268 @@
+﻿:root {
+    --rosa-claro: #FCE4EC;
+    --rosa-medio: #F8BBD0;
+    --rosa-fuerte: #F06292;
+    --blanco: #FFFFFF;
+    --texto: #4A3A3A;
+}
+
+body {
+    background-color: var(--rosa-claro);
+    font-family: "Georgia", "STKaiti", "KaiTi", serif;
+    color: var(--texto);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.tarjeta {
+    background: var(--blanco);
+    border-radius: 24px;
+    padding: 32px 24px;
+    max-width: 440px;
+    width: 100%;
+    box-shadow: 0 8px 32px rgba(240, 98, 146, 0.18);
+    border: 2px solid var(--rosa-medio);
+    text-align: center;
+    position: relative;
+}
+
+    .tarjeta::before {
+        content: "🎀";
+        position: absolute;
+        top: -16px;
+        right: 20px;
+        font-size: 30px;
+    }
+
+.titulo-portada {
+    color: var(--rosa-fuerte);
+    font-size: 28px;
+    margin: 8px 0 4px;
+}
+
+.subtitulo {
+    color: var(--texto);
+    font-size: 15px;
+    margin-bottom: 28px;
+    opacity: 0.8;
+}
+
+.boton-hoy {
+    background: var(--rosa-fuerte);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 17px;
+    border-radius: 28px;
+    cursor: pointer;
+    font-family: inherit;
+    box-shadow: 0 4px 16px rgba(240, 98, 146, 0.35);
+    transition: transform 0.2s;
+}
+
+    .boton-hoy:hover {
+        transform: scale(1.05);
+    }
+
+.nota {
+    font-size: 13px;
+    margin-top: 22px;
+    opacity: 0.7;
+}
+
+.enlace-inicio {
+    display: inline-block;
+    margin-top: 16px;
+    color: var(--rosa-fuerte);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu-poemas {
+    margin-top: 24px;
+}
+
+.boton-menu {
+    background: var(--blanco);
+    color: var(--rosa-fuerte);
+    border: 2px solid var(--rosa-medio);
+    padding: 12px 24px;
+    font-size: 15px;
+    border-radius: 24px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s;
+    width: 100%;
+    max-width: 320px;
+}
+
+    .boton-menu:hover {
+        background: var(--rosa-claro);
+    }
+
+.lista-meses {
+    margin-top: 16px;
+    text-align: left;
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid var(--rosa-medio);
+    border-radius: 16px;
+    padding: 8px;
+    background: #FFF8FB;
+}
+
+.mes-bloque {
+    margin-bottom: 6px;
+}
+
+.mes-titulo {
+    background: var(--rosa-medio);
+    color: white;
+    padding: 10px 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+    .mes-titulo:hover {
+        background: var(--rosa-fuerte);
+    }
+
+.mes-dias {
+    padding: 6px 4px 4px 12px;
+}
+
+.dia-link {
+    display: block;
+    color: var(--texto);
+    text-decoration: none;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    margin: 2px 0;
+    transition: background 0.15s;
+}
+
+    .dia-link:hover {
+        background: var(--rosa-claro);
+        color: var(--rosa-fuerte);
+    }
+
+
+#foto {
+    width: 100%;
+    height: 320px;
+    object-fit: contain; 
+    background-color: #FFF8FB; 
+    border-radius: 16px;
+    display: none;
+}
+
+#zona-foto {
+    width: 100%;
+    height: 320px; 
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#placeholder-foto {
+    width: 100%;
+    height: 320px;
+    background: var(--rosa-claro);
+    border: 2px dashed var(--rosa-medio);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--rosa-fuerte);
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+#titulo {
+    color: var(--rosa-fuerte);
+    font-size: 22px;
+    margin: 8px 0;
+}
+
+.texto-poema {
+    font-size: 17px;
+    line-height: 1.9;
+    white-space: pre-line;
+    text-align: left;
+    padding: 0 8px;
+    margin: 16px 0;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+    .navegacion a {
+        color: var(--rosa-fuerte);
+        text-decoration: none;
+        font-size: 14px;
+        padding: 8px 16px;
+        border-radius: 20px;
+        border: 1px solid var(--rosa-medio);
+        transition: background 0.2s, color 0.2s;
+    }
+
+        .navegacion a:hover {
+            background: var(--rosa-fuerte);
+            color: white;
+        }
+
+.volver {
+    display: block;
+    margin-top: 20px;
+    color: var(--rosa-fuerte);
+    text-decoration: none;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+
+.mensaje-carta {
+    background-color: #FFF8FB; 
+    border: 2px dashed var(--rosa-medio); 
+    border-radius: 16px;
+    padding: 16px 20px;
+    margin: 20px 0 24px 0;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--texto);
+    box-shadow: 0 4px 12px rgba(240, 98, 146, 0.05);
+}
+
+    .mensaje-carta p {
+        margin-bottom: 12px;
+    }
+
+        .mensaje-carta p:last-child {
+            margin-bottom: 0;
+            text-align: center;
+            color: var(--rosa-fuerte);
+            font-weight: bold;
+        }
+
+    .mensaje-carta strong {
+        color: var(--rosa-fuerte);
+        font-size: 15px;
+    }
